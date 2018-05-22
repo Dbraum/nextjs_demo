@@ -12,7 +12,8 @@ import { withStyles } from "@material-ui/core/styles";
 import { withRoot } from "../src/hoc";
 import GoodsSwipe from "../src/components/googs/GoodsSwipe";
 import InsetDividers from "../src/components/googs/InsetDividers";
-import TabsButton from "../src/components/googs/TabsButton";
+import CartAction from "../src/components/googs/CartAction";
+import { Page, Body, Footer } from "../src/components/Layout";
 
 const styles = theme => ({
   root: {
@@ -43,10 +44,15 @@ export default class Index extends React.Component {
     const { open } = this.state;
 
     return (
-      <div className={classes.root}>
-        <GoodsSwipe />
-        <InsetDividers />
-      </div>
+      <Page>
+        <Body>
+          <GoodsSwipe />
+          <InsetDividers />
+        </Body>
+        <Footer>
+          <CartAction />
+        </Footer>
+      </Page>
     );
   }
 }
