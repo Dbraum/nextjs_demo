@@ -13,12 +13,7 @@ import { withRoot } from "../src/hoc";
 import GoodsSwipe from "../src/components/googs/GoodsSwipe";
 import InsetDividers from "../src/components/googs/InsetDividers";
 import TabsButton from "../src/components/googs/TabsButton";
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import PhoneIcon from '@material-ui/icons/Phone';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import PersonPinIcon from '@material-ui/icons/PersonPin';
+
 const styles = theme => ({
   root: {
     textAlign: "center"
