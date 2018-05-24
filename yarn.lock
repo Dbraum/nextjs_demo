@@ -591,6 +591,13 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
+"@bit/bulong.dt.ui.layout@0.0.1":
+  version "0.0.1"
+  resolved "https://node.bitsrc.io/bulong.dt.ui.layout/-/bulong.dt.ui.layout-0.0.1.tgz#57650f98f7f53646679fd509a95d77c864ab7220"
+  dependencies:
+    "@material-ui/core" latest
+    react latest
+
 "@material-ui/core@latest":
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/@material-ui/core/download/@material-ui/core-1.0.0.tgz#857b871038bb300f2d25594ce0cd250be944e71b"

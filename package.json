@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@bit/bulong.dt.ui.layout": "0.0.1",
     "@material-ui/core": "latest",
     "@material-ui/icons": "^1.0.0",
     "jss": "latest",

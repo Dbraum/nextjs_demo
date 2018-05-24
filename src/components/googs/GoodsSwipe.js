@@ -6,29 +6,6 @@ import SwipeableViews from "react-swipeable-views";
 import InsetDividers from "./InsetDividers";
 
 
-const tutorialSteps = [
-  {
-    label: "How to be happy :)",
-    imgPath: "https://material-ui.com/static/images/steppers/1-happy.jpg"
-  },
-  {
-    label: "1. Work with something that you like, like…",
-    imgPath: "https://material-ui.com/static/images/steppers/2-work.jpg"
-  },
-  {
-    label: "2. Keep your friends close to you and hangout with them",
-    imgPath: "https://material-ui.com/static/images/steppers/3-friends.jpg"
-  },
-  {
-    label: "3. Travel everytime that you have a chance",
-    imgPath: "https://material-ui.com/static/images/steppers/4-travel.jpg"
-  },
-  {
-    label: "4. And contribute to Material-UI :D",
-    imgPath: "https://material-ui.com/static/images/steppers/5-mui.png"
-  }
-];
-
 const styles = theme => ({
   root: {
     position: "relative"
@@ -41,7 +18,9 @@ const styles = theme => ({
     bottom: 10
   },
   img: {
-    height: 255,
+    height: "auto",
+    minHeight: 255,
+    maxHeight: 600,
     overflow: "hidden",
     width: "100%"
   }
@@ -52,27 +31,15 @@ class SwipeableTextMobileStepper extends React.Component {
     activeStep: 0
   };
 
-  handleNext = () => {
-    this.setState(prevState => ({
-      activeStep: prevState.activeStep + 1
-    }));
-  };
-
-  handleBack = () => {
-    this.setState(prevState => ({
-      activeStep: prevState.activeStep - 1
-    }));
-  };
-
   handleStepChange = activeStep => {
     this.setState({ activeStep });
   };
 
   render() {
-    const { classes, theme } = this.props;
+    const { classes, theme, imgs = [] } = this.props;
     const { activeStep } = this.state;
 
-    const maxSteps = tutorialSteps.length;
+    const maxSteps = imgs.length;
 
     return (
       <div className={classes.root}>
@@ -82,13 +49,8 @@ class SwipeableTextMobileStepper extends React.Component {
           onChangeIndex={this.handleStepChange}
           enableMouseEvents
         >
-          {tutorialSteps.map(step => (
-            <img
-              key={step.label}
-              className={classes.img}
-              src={step.imgPath}
-              alt={step.label}
-            />
+          {imgs.map(img => (
+            <img key={img} className={classes.img} src={img} alt={img} />
           ))}
         </SwipeableViews>
         <MobileStepper

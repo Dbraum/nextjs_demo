@@ -1,6 +1,18 @@
 import React, { Component } from "react";
 import Paper from "@material-ui/core/Paper";
 
+/**
+ * @description Styled Layout component
+ * 
+ * @example
+ * <Page>
+ *  <Header>header</Header>
+ *  <Body>header</Body>
+ *  <Footer>header</Footer>
+ * </Page>
+ */
+
+
 export default class Layout extends Component {
   constructor(props) {
     super(props);
@@ -31,11 +43,11 @@ export function Header(props) {
       {props.children}
       <style jsx>{`
         .page_header {
-          height: 44px;
           background-color: #fff;
           text-align: center;
-          line-height: 44px;
           position: relative;
+          background-color: black;
+          padding: 0px;
         }
       `}</style>
     </div>
